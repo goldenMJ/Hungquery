@@ -10,10 +10,10 @@ import numpy as np
 import os
 import csv
 
-#################################################
-# Database Setup
-#################################################
-# engine = create_engine("sqlite:///titanic.sqlite")
+# ################################################
+# # Database Setup
+# ################################################
+# engine = create_engine("sqlite:///hungquery.sqlite")
 
 # # reflect an existing database into a new model
 # Base = automap_base()
@@ -21,9 +21,9 @@ import csv
 # Base.prepare(engine, reflect=True)
 
 # # Save reference to the table
-# Passenger = Base.classes.passenger
+# Passenger = Base.classes.recipes
 
-# Create our session (link) from Python to the DB
+# # Create our session (link) from Python to the DB
 
 
 
@@ -36,8 +36,6 @@ app = Flask(__name__)
 #################################################
 # Flask Routes
 #################################################
-
-
 @app.route("/")
 def home():
     return render_template('index.html') 
