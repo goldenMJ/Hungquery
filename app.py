@@ -23,7 +23,7 @@ import csv
 # # Save reference to the table
 # Passenger = Base.classes.recipes
 
-# # Create our session (link) from Python to the DB
+# # # Create our session (link) from Python to the DB
 
 
 
@@ -43,10 +43,4 @@ def home():
 if __name__ == "__main__":
     app.run(debug=True)
 
-@app.route('/form-example', methods=['GET', 'POST']) #allow both GET and POST requests
-def form_example():
-    return '''<form method="POST">
-                  Language: <input type="text" name="language"><br>
-                  Framework: <input type="text" name="framework"><br>
-                  <input type="submit" value="Submit"><br>
-              </form>'''
+
