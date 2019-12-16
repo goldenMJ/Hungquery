@@ -17,7 +17,8 @@
 </head>
 
 <body>
-
+{% block body %}
+<!-- Header stuff -->
 <div class="container">
 
     <div class="well text-center">
@@ -27,18 +28,173 @@
 
     </div>
 
+<div class="container">
+
+    <div class="row">
+        <div class="col md-12">
+            <h2>Recipes <button style=background-color:#FF6F61 type="button"  class="btn btn-success pull-right" data-toggle = "modal" data-target="#mymodal">Add New Recipe</button></h2>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Cuisine</th>
+                    <th>Type</th>
+                    <th>Recipe Name</th>
+                    <th>Calories</th>
+                    <th>URL Link</th>
+                    <th>Edit</th>
+
+                </tr>
+
+                <tr>
+                    <td>01</td>
+                    <td>German</td>
+                    <td>Breakfast</td>
+                    <td>Casserole</td>
+                    <td>400</td>
+                    <td><a href="https://thesweetestoccasion.com/2019/06/german-potato-breakfast-casserole/"> Link</a></td>
+                    <!-- action edit -->
+                    <td>
+
+                        <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                        <a style=background-color:#6B5B95 href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
+
+                    </td>
+
+        
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    <!-- make button functional -->
+    <div id="myModal" class="modal fade" role="dialog">
+
+
+            <div class="modal-dialog">
+         
+         
+               <div class="modal-content">
+         
+         
+                  <div class="modal-header">
+         
+         
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
+         
+                     <h4 class="modal-title">Insert Recipe</h4>
+         
+         
+                  </div>
+         
+         
+                  <div class="modal-body">
+         
+         
+                     <form action="" method="POST">
+         
+         
+                        <div class="form-group">
+         
+         
+                           <label>Cuisine:</label>
+                           <input type="text" class="form-control" name="name" required="1">
+         
+         
+                        </div>
+         
+         
+                         <div class="form-group">
+         
+         
+                           <label>Type:</label>
+                           <input type="text" class="form-control" name="email" required="1">
+         
+         
+                        </div>
+         
+         
+                         <div class="form-group">
+         
+         
+                           <label>Recipe Name:</label>
+                           <input type="text" class="form-control" name="phone" required="1">
+         
+         
+                        </div>
+
+                        <div class="form-group">
+         
+         
+                            <label>Calories:</label>
+                            <input type="text" class="form-control" name="phone" required="1">
+              
+              
+                         </div>
+
+                         <div class="form-group">
+         
+         
+                            <label>URL Link:</label>
+                            <input type="text" class="form-control" name="phone" required="1">
+              
+              
+                        </div>
+         
+         
+         
+                        <div class="form-group">
+         
+         
+                           <button class="btn btn-primary" type="submit">Insert Data</button>
+         
+         
+                        </div>
+         
+         
+                     </form>
+         
+         
+                  </div>
+         
+         
+                  <div class="modal-footer">
+         
+         
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         
+         
+                  </div>
+         
+         
+               </div>
+         
+         
+            </div>
+         
+         
+         </div>
 
 </div>
+{% endblock %}
 
+    <!-- footer stuff -->
     <div class="well">
     
         <p>© 2020<a href="https://www.linkedin.com/in/kadarseveamek/"> Kadar Amek</a> and <a href="https://www.linkedin.com/in/alienorviollet/">Alienor Viollet</a>
     
         </p>
     </div>
+</div>
 
 </body>
 
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
 
 
 </html>
