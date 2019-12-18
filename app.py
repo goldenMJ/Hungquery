@@ -40,6 +40,12 @@ app = Flask(__name__)
 def Index():
     return render_template('index.html') 
 
+@app.route("/addnew")
+def Addnew():
+    return render_template('addnew.html') 
+
+
+
 # to start server
 if __name__ == "__main__":
     app.run(debug=True)

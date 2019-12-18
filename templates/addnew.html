@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hunquery</title>
+ 
+    <!-- adding bootstrap link from css folder -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!--link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet"-->
+    <!-- adding logo icon for url from image folder -->
+    <link rel="icon" type="image/png" href="/static/images/logo.png" sizes="32x32">
+
+
+</head>
+
+<body>
+
+<!-- Header stuff -->
+<div class="container">
+
+        <form action= "/addnew" method="post">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">ID</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Cuisine</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>American</option>
+                <option>Chinese</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Thai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Type</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Recipe Name</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Calories</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="140">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">URL Link</label>
+                <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="https://example.com/recipe">
+            </div>
+        </form>
+    
+    
+    <div class="container">
+
+
+</div>
+
+    <!-- footer stuff -->
+    <div class="well">
+    
+        <p>© 2020<a href="https://www.linkedin.com/in/kadarseveamek/"> Kadar Amek</a> and <a href="https://www.linkedin.com/in/alienorviollet/">Alienor Viollet</a>
+    
+        </p>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+
+
+</html>
