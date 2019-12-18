@@ -32,14 +32,14 @@
 
     <div class="row">
         <div class="col md-12">
-            <h2>Recipes <button style=background-color:#FF6F61 type="button"  class="btn btn-success pull-right" data-toggle = "modal" data-target="#mymodal">Add New Recipe</button></h2>
-
+            <h2>Recipes <button style=background-color:#FF6F61 type="button"  class="btn btn-success pull-right" data-toggle = "modal" data-target="#mymodal" onclick="window.location.href='/addnew'">Add New Recipe</button></h2>
+             
             <table class="table table-striped">
                 <tr>
                     <th>ID</th>
+                    <th>Recipe Name</th>
                     <th>Cuisine</th>
                     <th>Type</th>
-                    <th>Recipe Name</th>
                     <th>Calories</th>
                     <th>URL Link</th>
                     <th>Edit</th>
@@ -48,9 +48,9 @@
 
                 <tr>
                     <td>01</td>
+                    <td>Casserole</td>
                     <td>German</td>
                     <td>Breakfast</td>
-                    <td>Casserole</td>
                     <td>400</td>
                     <td><a href="https://thesweetestoccasion.com/2019/06/german-potato-breakfast-casserole/"> Link</a></td>
                     <!-- action edit -->

@@ -40,9 +40,14 @@ app = Flask(__name__)
 def Index():
     return render_template('index.html') 
 
-@app.route("/addnew")
+@app.route("/addnew", methods=['GET', 'POST'])
 def Addnew():
-    return render_template('addnew.html') 
+    if request.method == 'GET':
+        return render_template('addnew.html')
+    else:
+        data = request.form
+        print(data)
+        return jsonify(data)
 
 
 
