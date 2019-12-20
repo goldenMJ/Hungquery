@@ -11,19 +11,14 @@ import os
 import csv
 
 # ################################################
-# # Database Setup
-# ################################################
-# engine = create_engine("sqlite:///hungquery.sqlite")
-
-# # reflect an existing database into a new model
-# Base = automap_base()
-# # reflect the tables
-# Base.prepare(engine, reflect=True)
-
-# # Save reference to the table
-# Passenger = Base.classes.recipes
-
-# # # Create our session (link) from Python to the DB
+# Database Setup
+################################################
+# Connect to the database 
+# rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
+rds_connection_string = "postgres:5432@localhost:5432/hunquery"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+print(engine.table_names())
+# # Create our session (link) from Python to the DB
 
 
 
