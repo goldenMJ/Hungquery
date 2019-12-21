@@ -89,9 +89,10 @@ def Addnew():
         data = request.form
         
         sql = "INSERT INTO recipes(recipe_name, time, url, special_diet, blurb, course_type, group_by_time)"\
-        "VALUES ('" + data.Name + "', " + data.Name + ", '" + data.Name + "', '" + data.Name + "', '" + data.Name + "', '" + data.Name + "', '" + data.GroupbyTime + "');"
+        "VALUES ('" + data["Name"] + "', " + data["Minutes"] + ", '" + data["Link"] + "', '" + data["SpecialDiets"] + "', '" + data["blurb"] + "', '" + data["Type"] + "', '" + data["GroupbyTime"] + "');"
+        engine.execute(sql)
         print(data)
-        #return "success"
+        return "success"
 
 
 
