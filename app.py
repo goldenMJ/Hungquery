@@ -100,7 +100,14 @@ def SearchRecipe():
     else:
         data = request.form
         print(data)
-        return jsonify(data)
+        search_time = '' #user input
+        sql = "SELECT recipe_name, time, url, special_diet, blurb, course_type  FROM recipes Where time=" + data["search_time"] + " LIMIT 2 OFFSET 0"
+        print(sql)
+        res = engine.execute(sql)
+        for i in res:
+            print(i)
+        #return jsonify(data)
+        return render_template('search_recipe.html')
 
 
 # to start server
