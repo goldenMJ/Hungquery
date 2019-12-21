@@ -92,6 +92,15 @@ def Addnew():
         return jsonify(data)
 
 
+@app.route("/search_recipe", methods=['GET', 'POST'])
+def SearchRecipe():
+    if request.method == 'GET':
+        return render_template('search_recipe.html')
+    else:
+        data = request.form
+        print(data)
+        return jsonify(data)
+
 
 # to start server
 if __name__ == "__main__":
