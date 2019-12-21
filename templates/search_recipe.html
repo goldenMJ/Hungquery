@@ -85,24 +85,25 @@
              
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th>
-                    <th>Recipe Name</th>
-                    <th>Cuisine</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>URL</th>
+                    <th>Special Diet</th>
+                    <th>Summary</th>
                     <th>Type</th>
-                    <th>Calories</th>
-                    <th>URL Link</th>
                     <th>Edit</th>
 
                 </tr>
                 {% for item in all_recipes %}
+
                 <tr>
-                        <td>##</td>
                         <td>{{ item.recipe_name }}</td>
-                        <td>{{ item.special_diet }}</td>
-                        <td>{{ item.course_type }}</td>
-                        <td>##</td>
-                        <td>{{ item.url }}</td>
+                        <td>{{ item.time }}</td>
                         <td><a href="{{ item.url }}"> Click Here</a></td>
+                        <td>{{ item.special_diet }}</td>
+                        <td>{{ item.blurb }}</td>
+                        <td>{{ item.course_type }}</td>
+                        
                         <!-- action edit -->
                         <td>    
                             <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
