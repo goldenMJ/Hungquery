@@ -61,11 +61,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ################################################
 
-# Connect to the database 
-rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
-rds_connection_string = "postgres:5432@localhost:5432/hunquery"
-engine = create_engine(f'postgresql://{rds_connection_string}')
-print(engine.table_names())
+#ali    # Connect to the database 
+#ali    rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
+#ali    rds_connection_string = "postgres:5432@localhost:5432/hunquery"
+#ali    engine = create_engine(f'postgresql://{rds_connection_string}')
+#ali    print(engine.table_names())
 
 # Create our session (link) from Python to the DB
 
@@ -112,19 +112,19 @@ def SearchRecipe():
         
 
         # Create a dictionary from the row data and append to a list of recipes
-all_recipes = []
-for recipe_name, time, url, special_diet, blurb, course_type in sql:
-    recipe_dict = {}
-    recipe_dict["recipe_name"] = recipe_name
-    recipe_dict["time"] = time
-    recipe_dict["url"] = url
-    recipe_dict["special_diet"] = special_diet
-    recipe_dict["blurb"] = blurb
-    recipe_dict["course_type"] = course_type
-    all_recipes.append(recipe_dict)
-    print(recipe_dict)
+#ali    all_recipes = []
+#ali    for recipe_name, time, url, special_diet, blurb, course_type in sql:
+#ali        recipe_dict = {}
+#ali        recipe_dict["recipe_name"] = recipe_name
+#ali        recipe_dict["time"] = time
+#ali        recipe_dict["url"] = url
+#ali        recipe_dict["special_diet"] = special_diet
+#ali        recipe_dict["blurb"] = blurb
+#ali        recipe_dict["course_type"] = course_type
+#ali        all_recipes.append(recipe_dict)
+#ali        print(recipe_dict)
 
-    return jsonify(all_recipes)
+#ali    return jsonify(all_recipes)
 
 
 
@@ -134,3 +134,9 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
+
+#ali    app = Flask(__name__)
+#ali    arr =  []
+#ali    for i in data:
+#ali        if option1:
+#ali             arr.append()

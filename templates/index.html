@@ -78,45 +78,45 @@
             <button class="btn btn-outline-success my-2 my-sm-0" style=background-color:#FF6F61 type="submit">Search</button>
         </form>
     </div>
-    <div class="row">
-        <div class="col md-12">
-            <h2>Recipes <button style=background-color:#FF6F61 type="button"  class="btn btn-success pull-right" data-toggle = "modal" data-target="#mymodal" onclick="window.location.href='/addnew'">Add New Recipe</button></h2>
-             
-            <table class="table table-striped">
-                <tr>
-                    <th>ID</th>
-                    <th>Recipe Name</th>
-                    <th>Cuisine</th>
-                    <th>Type</th>
-                    <th>Calories</th>
-                    <th>URL Link</th>
-                    <th>Edit</th>
+<div class="row">
+    <div class="col md-12">
+        <h2>Recipes <button style=background-color:#FF6F61 type="button"  class="btn btn-success pull-right" data-toggle = "modal" data-target="#mymodal" onclick="window.location.href='/addnew'">Add New Recipe</button></h2>
+            
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Minutes</th>
+                <th>Link</th>
+                <th>Special Diet</th>
+                <th>Blurb</th>
+                <th>Type</th>
+                <th>Edit</th>
 
-                </tr>
+            </tr>
 
-                <tr>
-                    <td>01</td>
-                    <td>Casserole</td>
-                    <td>German</td>
-                    <td>Breakfast</td>
-                    <td>400</td>
-                    <td><a href="https://thesweetestoccasion.com/2019/06/german-potato-breakfast-casserole/"> Link</a></td>
-                    <!-- action edit -->
-                    <td>
+            <tr>
+                <td>Omelette in a Mug</td>
+                <td>4</td>
+                <td><a href="https://www.simplyrecipes.com/author/elise-bauer/"> Link</a></td>
+                <td>Gluten-Free, Low Carb, Vegetarian</td>
+                <td>Need an easy omelette recipe? Try a microwave omelette! Learn how to cook eggs in the microwave, and you'll have an easy and delicious meal, perfect for busy days.</td>
+                <td>breakfast</td>
+                <!-- action edit -->
+                <td>
 
-                        <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
-                        <a style=background-color:#6B5B95 href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                    <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                    <a style=background-color:#6B5B95 href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
+            
+                </td>
 
-                    </td>
+    
 
-        
-
-                </tr>
-            </table>
-        </div>
-
-
+            </tr>
+        </table>
     </div>
+
+
+</div>
 
 </div>
 
