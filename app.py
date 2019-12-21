@@ -66,6 +66,7 @@ rds_connection_string = "<insert user name>:<insert password>@localhost:5432/cus
 rds_connection_string = "postgres:5432@localhost:5432/hunquery"
 engine = create_engine(f'postgresql://{rds_connection_string}')
 print(engine.table_names())
+
 # Create our session (link) from Python to the DB
 
 
@@ -108,6 +109,24 @@ def SearchRecipe():
             print(i)
         #return jsonify(data)
         return render_template('search_recipe.html')
+        
+
+        # Create a dictionary from the row data and append to a list of recipes
+all_recipes = []
+for recipe_name, time, url, special_diet, blurb, course_type in sql:
+    recipe_dict = {}
+    recipe_dict["recipe_name"] = recipe_name
+    recipe_dict["time"] = time
+    recipe_dict["url"] = url
+    recipe_dict["special_diet"] = special_diet
+    recipe_dict["blurb"] = blurb
+    recipe_dict["course_type"] = course_type
+    all_recipes.append(recipe_dict)
+    print(recipe_dict)
+
+    return jsonify(all_recipes)
+
+
 
 
 # to start server
