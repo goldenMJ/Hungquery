@@ -13,6 +13,35 @@ import csv
 # ################################################
 # Database Setup
 ################################################
+#create table in db:
+# -- DROP DATABASE hunquery;
+
+# CREATE DATABASE hunquery
+#     WITH 
+#     OWNER = postgres
+#     ENCODING = 'UTF8'
+#     LC_COLLATE = 'C'
+#     LC_CTYPE = 'C'
+#     TABLESPACE = pg_default
+#     CONNECTION LIMIT = -1;
+
+# -- CREATE TABLE
+# DROP TABLE recipes;
+
+# CREATE TABLE recipes (
+#      recipe_name VARCHAR(100) NOT NULL,
+#  	 "time" INT,
+#  	 url VARCHAR(100) NOT NULL,
+#    	 special_diet VARCHAR(100) NULL,
+# 	 blurb TEXT,
+#      course_type VARCHAR(50) NOT NULL,
+# 	 group_by_time VARCHAR(50) NOT NULL
+# );
+
+
+# SELECT * FROM recipes;
+# ################################################
+
 # Connect to the database 
 # rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
 rds_connection_string = "postgres:5432@localhost:5432/hunquery"
