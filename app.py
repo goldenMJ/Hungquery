@@ -13,7 +13,10 @@ import csv
 # ################################################
 # Database Setup
 ################################################
-#create table in db:
+
+# create db schema and queries:
+# -- Database: hunquery
+
 # -- DROP DATABASE hunquery;
 
 # CREATE DATABASE hunquery
@@ -40,6 +43,21 @@ import csv
 
 
 # SELECT * FROM recipes;
+
+# --WHERE clause to filter rows based on:
+
+# SELECT *
+# FROM recipes
+# WHERE time =30;
+
+# SELECT *
+# FROM recipes
+# WHERE time >30;
+
+# SELECT *
+# FROM recipes
+# WHERE time <30;
+
 # ################################################
 
 # Connect to the database 
