@@ -61,11 +61,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ################################################
 
-#ali    # Connect to the database 
-#ali    rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
-#ali    rds_connection_string = "postgres:5432@localhost:5432/hunquery"
-#ali    engine = create_engine(f'postgresql://{rds_connection_string}')
-#ali    print(engine.table_names())
+#Connect to the database 
+rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
+rds_connection_string = "postgres:5432@localhost:5432/hunquery"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+print(engine.table_names())
 
 # Create our session (link) from Python to the DB
 
@@ -101,42 +101,28 @@ def SearchRecipe():
     else:
         data = request.form
         print(data)
-        search_time = '' #user input
+        # search_time = '' #user input
         sql = "SELECT recipe_name, time, url, special_diet, blurb, course_type  FROM recipes Where time=" + data["search_time"] + " LIMIT 2 OFFSET 0"
         print(sql)
         res = engine.execute(sql)
+        all_recipes = []
         for i in res:
-            print(i)
+            all_recipes.append({
+                "recipe_name": i[0],
+                "time": i[1],
+                "url": i[2],
+                "special_diet": i[3],
+                "blurb": i[4],
+                "course_type": i[5],
+            })
+        print(all_recipes)
         #return jsonify(data)
-        return render_template('search_recipe.html')
+        return render_template('search_recipe.html', all_recipes=all_recipes
+        )
         
-
-        # Create a dictionary from the row data and append to a list of recipes
-#ali    all_recipes = []
-#ali    for recipe_name, time, url, special_diet, blurb, course_type in sql:
-#ali        recipe_dict = {}
-#ali        recipe_dict["recipe_name"] = recipe_name
-#ali        recipe_dict["time"] = time
-#ali        recipe_dict["url"] = url
-#ali        recipe_dict["special_diet"] = special_diet
-#ali        recipe_dict["blurb"] = blurb
-#ali        recipe_dict["course_type"] = course_type
-#ali        all_recipes.append(recipe_dict)
-#ali        print(recipe_dict)
-
-#ali    return jsonify(all_recipes)
-
 
 
 
 # to start server
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-#ali    app = Flask(__name__)
-#ali    arr =  []
-#ali    for i in data:
-#ali        if option1:
-#ali             arr.append()

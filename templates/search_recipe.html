@@ -73,8 +73,9 @@
 
 <div class="container">
     <div align="center">
+        <form action="/search_recipe" method="post" class="form-inline my-2 my-lg-0">
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" name="search_time" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" style=background-color:#FF6F61 type="submit">Search</button>
         </form>
     </div>
@@ -93,25 +94,23 @@
                     <th>Edit</th>
 
                 </tr>
-
+                {% for item in all_recipes %}
                 <tr>
-                    <td>01</td>
-                    <td>Casserole</td>
-                    <td>German</td>
-                    <td>Breakfast</td>
-                    <td>400</td>
-                    <td><a href="https://thesweetestoccasion.com/2019/06/german-potato-breakfast-casserole/"> Link</a></td>
-                    <!-- action edit -->
-                    <td>
+                        <td>##</td>
+                        <td>{{ item.recipe_name }}</td>
+                        <td>{{ item.special_diet }}</td>
+                        <td>{{ item.course_type }}</td>
+                        <td>##</td>
+                        <td>{{ item.url }}</td>
+                        <td><a href="{{ item.url }}"> Click Here</a></td>
+                        <!-- action edit -->
+                        <td>    
+                            <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                            <a style=background-color:#6B5B95 href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                        </td>
+                    </tr>    
+                {% endfor %}
 
-                        <a style=background-color:#FF6F61 href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
-                        <a style=background-color:#6B5B95 href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
-
-                    </td>
-
-        
-
-                </tr>
             </table>
         </div>
 

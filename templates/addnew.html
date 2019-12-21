@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-
+​
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,76 +11,57 @@
     <!--link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet"-->
     <!-- adding logo icon for url from image folder -->
     <link rel="icon" type="image/png" href="/static/images/logo.png" sizes="32x32">
-
-
+​
+​
 </head>
-
+​
 <body>
-
+​
 <!-- Header stuff -->
 <div class="container">
-
+​
     <div class="well text-center">
-
+​
         <h1>Hunquery</h1>
         <p>By Alienor and Kadar</p>
-
+​
     </div>
-
+​
 <div class="container">
     
 <div class="container">
-
-
+​
+​
     <form action= "/addnew" method="post">
-
+​
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Name</label>
             <textarea class="form-control" name="Name" id="exampleFormControlTextarea1" rows="1"></textarea>
         </div>
-
+​
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Minutes</label>
             <input type="number" class="form-control" name="Calories" id="exampleFormControlInput1" placeholder="25">
         </div>
-
+​
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Link</label>
             <input type="url" class="form-control" name="Link" id="exampleFormControlInput1" placeholder="https://example.com/recipe">
         </div>
-
+​
         <div class="form-group">
             <fieldset>
-
-            <label for="exampleFormControlSelect1">Special Diet</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="Gluten-Free" type="checkbox" id="inlineCheckbox1" value="Gluten-Free">
-                <label class="form-check-label" for="inlineCheckbox1">Gluten-Free</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="Low Carb" type="checkbox" id="inlineCheckbox2" value="Low Carb">
-                <label class="form-check-label" for="inlineCheckbox2">Low Carb</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="Paleo" type="checkbox" id="inlineCheckbox3" value="Paleo">
-                <label class="form-check-label" for="inlineCheckbox3">Paleo</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="Vegan" type="checkbox" id="inlineCheckbox4" value="Vegan">
-                <label class="form-check-label" for="inlineCheckbox4">Vegan</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="Vegetarian" type="checkbox" id="inlineCheckbox5" value="Vegetarian">
-                <label class="form-check-label" for="inlineCheckbox5">Vegetarian</label>
-            </div>
-        </fieldset>
-    </div>
-
+​
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Special Diets</label>
+            <textarea class="form-control" name="Name" id="exampleFormControlTextarea1" rows="1" placeholder="Indicate if the recipe follows any restrictions (Gluten-Free, Paleo, Vegan, Low-Carb)"></textarea>
+        </div>
+​
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Blurb</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write a short description of the recipe and the main ingredients used."></textarea>
         </div>
-
+​
         <div class="form-group">
             <label for="exampleFormControlSelect2">Type</label>
             <select class="form-control" name="Type" id="exampleFormControlSelect1">
@@ -90,22 +70,22 @@
             <option>Dinner</option>
             </select>
         </div>
-
-
+​
+​
         <button class="btn btn-primary" type="submit">Submit form</button>
-
+​
     </form>
-
-
+​
+​
 <div class="container">
-
+​
 <div class="container">
-
-
+​
+​
 </div>
-
+​
 <!-- footer stuff -->
-
+​
     <div class="well">
     
         <p>© 2020<a href="https://www.linkedin.com/in/kadarseveamek/"> Kadar Amek</a> and <a href="https://www.linkedin.com/in/alienorviollet/">Alienor Viollet</a>
@@ -113,11 +93,11 @@
         </p>
     </div>
 </div>
-
+​
 </body>
-
+​
 <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
 <script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
-
-
+​
+​
 </html>
