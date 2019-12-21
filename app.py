@@ -9,6 +9,7 @@ from sqlalchemy import create_engine, func
 import numpy as np
 import os
 import csv
+from flask_sqlalchemy import SQLAlchemy
 
 # ################################################
 # Database Setup
@@ -61,11 +62,11 @@ import csv
 # ################################################
 
 # Connect to the database 
-# rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
-# rds_connection_string = "postgres:5432@localhost:5432/hunquery"
-# engine = create_engine(f'postgresql://{rds_connection_string}')
-# print(engine.table_names())
-# # Create our session (link) from Python to the DB
+rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
+rds_connection_string = "postgres:5432@localhost:5432/hunquery"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+print(engine.table_names())
+# Create our session (link) from Python to the DB
 
 
 
