@@ -62,14 +62,11 @@ from flask_sqlalchemy import SQLAlchemy
 # ################################################
 
 #Connect to the database 
-rds_connection_string = "<insert user name>:<insert password>@localhost:5432/customer_db"
 rds_connection_string = "postgres:5432@localhost:5432/hunquery"
 engine = create_engine(f'postgresql://{rds_connection_string}')
 print(engine.table_names())
 
 # Create our session (link) from Python to the DB
-
-
 
 
 #################################################
@@ -90,8 +87,12 @@ def Addnew():
         return render_template('addnew.html')
     else:
         data = request.form
+        
+        sql = "INSERT INTO recipes(recipe_name, time, url, special_diet, blurb, course_type, group_by_time)"\
+        "VALUES ('" + data.Name + "', " + data.Name + ", '" + data.Name + "', '" + data.Name + "', '" + data.Name + "', '" + data.Name + "', '" + data.GroupbyTime + "');"
         print(data)
-        return jsonify(data)
+        #return "success"
+
 
 
 @app.route("/search_recipe", methods=['GET', 'POST'])
