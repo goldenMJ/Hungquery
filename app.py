@@ -11,6 +11,7 @@ import os
 import csv
 from flask_sqlalchemy import SQLAlchemy
 
+
 # ################################################
 # Database Setup
 ################################################
@@ -81,6 +82,10 @@ app = Flask(__name__)
 def Index():
     return render_template('index.html') 
 
+@app.route("/Plot")
+def Plot():
+    return render_template('Plot.html') 
+
 @app.route("/addnew", methods=['GET', 'POST'])
 def Addnew():
     if request.method == 'GET':
@@ -93,6 +98,7 @@ def Addnew():
         engine.execute(sql)
         print(data)
         return "success"
+
 
 
 
