@@ -69,6 +69,13 @@ print(engine.table_names())
 
 # Create our session (link) from Python to the DB
 
+# # Connect to the database AV 
+# rds_connection_string = "postgres:postgres@localhost:5432/hungquery"
+# engine = create_engine(f'postgresql://{rds_connection_string}')
+# engine
+
+# # Create our session (link) from Python to the DB
+
 
 #################################################
 # Flask Setup
