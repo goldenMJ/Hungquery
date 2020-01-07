@@ -1,0 +1,19 @@
+{
+  "name": "hungquery",
+  "version": "1.0.0",
+  "description": "Project: We will create a simple CRUD app to store and query recipe detais (more than 800) based on user inputs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenMJ/Hungquery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goldenMJ/Hungquery/issues"
+  },
+  "homepage": "https://github.com/goldenMJ/Hungquery#readme"
+}
