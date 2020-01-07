@@ -41,7 +41,7 @@ mccabe==0.6.1
 mkdir==2019.4.13
 more-itertools==7.2.0
 murmurhash==1.0.2
-nltk==3.4.3
+nltk==3.4.5
 numexpr==2.7.0
 numpy==1.16.4
 odfpy==1.4.0
