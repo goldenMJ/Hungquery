@@ -62,19 +62,19 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ################################################
 
-#Connect to the database 
-rds_connection_string = "postgres:5432@localhost:5432/hunquery"
-engine = create_engine(f'postgresql://{rds_connection_string}')
-print(engine.table_names())
-
-# Create our session (link) from Python to the DB
-
-# # Connect to the database AV 
-# rds_connection_string = "postgres:postgres@localhost:5432/hungquery"
+# #Connect to the database 
+# rds_connection_string = "postgres:5432@localhost:5432/hunquery"
 # engine = create_engine(f'postgresql://{rds_connection_string}')
-# engine
+# print(engine.table_names())
 
 # # Create our session (link) from Python to the DB
+
+# Connect to the database AV 
+rds_connection_string = "postgres:postgres@localhost:5432/hungquery"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+engine
+
+# Create our session (link) from Python to the DB
 
 
 #################################################
@@ -89,9 +89,27 @@ app = Flask(__name__)
 def Index():
     return render_template('index.html') 
 
+# Graph for all recipes 
 @app.route("/Plot")
 def Plot():
     return render_template('Plot.html') 
+
+
+# Graph for breakfast recipes
+@app.route("/breakfastpie")
+def Breakfastpie():
+    return render_template('breakfastpie.html') 
+
+# Graph for lunch recipes
+@app.route("/lunchpie")
+def Lunchpie():
+    return render_template('lunchpie.html') 
+
+# Graph for dinner recipes
+@app.route("/dinnerpie")
+def Dinnerpie():
+    return render_template('dinnerpie.html') 
+
 
 @app.route("/addnew", methods=['GET', 'POST'])
 def Addnew():
