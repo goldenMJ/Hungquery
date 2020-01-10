@@ -62,17 +62,17 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ################################################
 
-# #Connect to the database 
-# rds_connection_string = "postgres:5432@localhost:5432/hunquery"
-# engine = create_engine(f'postgresql://{rds_connection_string}')
+# #Connect to the database KA
+rds_connection_string = "postgres:5432@localhost:5432/hunquery"
+engine = create_engine(f'postgresql://{rds_connection_string}')
 # print(engine.table_names())
 
 # # Create our session (link) from Python to the DB
 
 # Connect to the database AV 
-rds_connection_string = "postgres:postgres@localhost:5432/hungquery"
-engine = create_engine(f'postgresql://{rds_connection_string}')
-engine
+# rds_connection_string = "postgres:postgres@localhost:5432/hungquery"
+# engine = create_engine(f'postgresql://{rds_connection_string}')
+# engine
 
 # Create our session (link) from Python to the DB
 
@@ -135,7 +135,7 @@ def SearchRecipe():
         data = request.form
         print(data)
         # search_time = '' #user input
-        sql = "SELECT recipe_name, time, url, special_diet, blurb, course_type  FROM recipes Where time=" + data["search_time"] + " LIMIT 2 OFFSET 0"
+        sql = "SELECT recipe_name, time, url, special_diet, blurb, course_type  FROM recipes Where time=" + data["search_time"] + " LIMIT 10 OFFSET 0"
         print(sql)
         res = engine.execute(sql)
         all_recipes = []
