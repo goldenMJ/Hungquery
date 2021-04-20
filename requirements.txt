@@ -57,7 +57,7 @@ ply==3.11
 preshed==3.0.2
 psycopg2==2.8.4
 public==2019.4.13
-py==1.8.0
+py==1.10.0
 pyLDAvis==2.1.2
 pylint==2.4.4
 pylint-flask==0.6
