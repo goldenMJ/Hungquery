@@ -45,7 +45,7 @@ nltk==3.4.3
 numexpr==2.7.0
 numpy==1.16.4
 odfpy==1.4.0
-opencv-python==4.1.0.25
+opencv-python==4.1.1.26
 openpyxl==3.0.0
 packaging==19.2
 pandas==0.25.1
